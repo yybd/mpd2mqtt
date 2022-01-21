@@ -87,7 +87,9 @@ get music/mpd/get:
       
 
 
-To debug or check it you can use the commandline mqtt client: mosquitto_pub -h localhost -t "music/mpd/set" -m '{"player":"toggle"}'
+To debug or check it you can use the commandline mqtt client: 
+
+    mosquitto_pub -h localhost -t "music/mpd/set" -m '{"player":"toggle"}'
 
 
 
