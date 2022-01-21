@@ -13,7 +13,7 @@ set Permission:
     mpd_server='localhost'
     mpd_password=''
     mpd_port=''
-    mqtt_server='10.0.1.12'
+    mqtt_server='10.0.1.12' <you ip mqtt server>
     mqtt_topic_get='musicSalon/mpd/get'
     mqtt_topic_set='musicSalon/mpd/set'
     mqtt_user=''
