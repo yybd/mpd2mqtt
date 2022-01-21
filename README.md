@@ -1,5 +1,23 @@
 # mpd2mqtt
 
+install:
+
+    apt update && apt -y upgrade; apt install -y mpc iputils-ping jq mosquitto-clients; apt autoremove -y; rm -rf /var/lib/apt/lists
+
+    set Permission:
+    chmod 744 /home/mpd2mqtt/mpd2mqtt.sh
+
+    copy to /lib/systemd/system:
+    cp mpd2mqtt.service /lib/systemd/system
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable mpd2mqtt
+
+    systemctl start mpd2mqtt
+    
+    systemctl status mpd2mqtt
+
+
 You can change the payers state by, sending something to the topic music/mpd/set.
 
     {"player": "play"}
