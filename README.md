@@ -1,5 +1,11 @@
 # mpd2mqtt
 
+git:
+
+    cd /home
+    git clone https://github.com/yybd/mpd2mqtt.git
+  
+  
 install:
 
     apt update && apt -y upgrade; apt install -y mpc iputils-ping jq mosquitto-clients; apt autoremove -y; rm -rf /var/lib/apt/lists
