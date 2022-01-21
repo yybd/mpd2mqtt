@@ -32,8 +32,9 @@ copy mpd2mqtt.service to /lib/systemd/system & enable service:
     systemctl status mpd2mqtt
 
 
+# mqtt client publisher & subscribe
 
-You can change the payers state by, sending something to the topic music/mpd/set.
+You can change the payers state by, publisher to the topic music/mpd/set.
 
     {"player": "play"}
     {"player": "pause"}
@@ -69,7 +70,7 @@ You can change your queue:
         "consume": "off"
       }
 
-get the topic music/mpd/get:
+subscribe the topic music/mpd/get:
     
     {
       "player": {
