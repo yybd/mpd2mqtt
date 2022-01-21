@@ -1,0 +1,15 @@
+[Unit]
+Description=Mpd2mqtt
+After=network-target
+
+
+[Service]
+ExecStart=/home/mpd2mqtt/mpd2mqtt.sh
+WorkingDirectory= /home/mpd2mqtt
+
+Restart=always
+
+
+
+[Install]
+WantedBy=multi-user.target
