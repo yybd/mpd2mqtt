@@ -4,10 +4,12 @@ install:
 
     apt update && apt -y upgrade; apt install -y mpc iputils-ping jq mosquitto-clients; apt autoremove -y; rm -rf /var/lib/apt/lists
 
-    set Permission:
+set Permission:
+
     chmod 744 /home/mpd2mqtt/mpd2mqtt.sh
 
-    copy to /lib/systemd/system:
+copy mpd2mqtt.service to /lib/systemd/system & enable service:
+
     cp mpd2mqtt.service /lib/systemd/system
 
     sudo systemctl daemon-reload
