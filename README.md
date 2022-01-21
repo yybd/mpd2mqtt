@@ -7,6 +7,18 @@ install:
 set Permission:
 
     chmod 744 /home/mpd2mqtt/mpd2mqtt.sh
+    
+ config mqtt in data/mpd2mqtt.config file:
+ 
+    mpd_server='localhost'
+    mpd_password=''
+    mpd_port=''
+    mqtt_server='10.0.1.12'
+    mqtt_topic_get='musicSalon/mpd/get'
+    mqtt_topic_set='musicSalon/mpd/set'
+    mqtt_user=''
+    mqtt_password=''
+    debug='0'
 
 copy mpd2mqtt.service to /lib/systemd/system & enable service:
 
