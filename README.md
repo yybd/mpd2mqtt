@@ -32,6 +32,7 @@ copy mpd2mqtt.service to /lib/systemd/system & enable service:
     systemctl status mpd2mqtt
 
 
+
 You can change the payers state by, sending something to the topic music/mpd/set.
 
     {"player": "play"}
@@ -68,7 +69,7 @@ You can change your queue:
         "consume": "off"
       }
 
-get music/mpd/get:
+get the topic music/mpd/get:
     
     {
       "player": {
